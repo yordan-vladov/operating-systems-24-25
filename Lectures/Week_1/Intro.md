@@ -16,12 +16,14 @@
 
 
 ![Processor_Front](/Attachments/Processor_Front.png)
+
 **Фиг. 1 Intel Core i9 (отпред)**
 
 ---
 
 
 ![Processor_Back](/Attachments/Processor_Back.png)
+
 **Фиг. 2 Intel Core i9 (отзад)**
 
 ---
@@ -36,6 +38,7 @@
 ---
 
 ![CPU_Structure](/Attachments/CPU_Structure.png)
+
 **Фиг. 3 Структура на CPU**
 
 ---
@@ -57,6 +60,7 @@
 ---
 
 ![Data_Path](/Attachments/Data_Path.png)
+
 **Фиг. 4 Data Path**
 
 ---
@@ -105,6 +109,7 @@
 ## Бит в реалност
 
 ![Bits_From_Electric_Signal](/Attachments/BIts_From_Electric_Signal.jpg)
+
 **Фиг. 5 Електричен сигнал, който представлява поредица от битове**
 
 ---
@@ -119,6 +124,7 @@
 ---
 
 ![96_bit_memory_organization](/Attachments/96_bit_memory_organization.png)
+
 **Фиг 6. Различни начини да се подреди 96-битова памет**
 
 ---
@@ -167,11 +173,13 @@
 ---
 
 ![Funny_Keyboard](/Attachments/Funny_Keyboard.png)
+
 **Фиг. 7 Клавиатура**
 
 ---
 
 ![Funny_Mouse](/Attachments/Funny_Mouse.png)
+
 **Фиг 8. Mишка**
 
 ---
