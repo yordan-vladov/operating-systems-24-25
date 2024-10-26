@@ -230,7 +230,7 @@
 - Linux след това става фокусна точка на свободният софтуер
 
 ---
-![](/Attachments/OS_Linux_Pic_4.png|400)
+![](/Attachments/OS_Linux_Pic_4.png)
 
 ---
 ## GNU/Linux
