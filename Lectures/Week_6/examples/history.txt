@@ -1,0 +1,31 @@
+sudo dnf install viber.rpm
+exit
+sudo dnf uninstall viber.rpm
+sudo dnf remove viber.rpm
+sudo dnf remove viber
+flatpak install flathub com.viber.Viber
+clear
+sudo dnf install mysql-workbench-community-8.0.36-1.fc38.src.rpm
+sudo dnf install mysql-workbench-community-8.0.36-1.fc38.x86_64.rpm
+clear
+sudo mysql
+sudo dnf install mysql-workbench-community-8.0.36-1.fc38.x86_64.rpm
+sudo dnf install adwaita-gtk2-theme
+sudo mv sf-mono-cdnfonts /usr/share/fonts
+sudo dnf install zsh
+chsh -s $(which zsh)
+exit
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+clear
+exit
+echo "$SHELL"
+env
+env | grep ANDROID
+echo $SHELL
+clear
+exit
+env | grep ANDROID
+source .bashrc
+ls
+env | grep ANDROID
+python student_query.py
