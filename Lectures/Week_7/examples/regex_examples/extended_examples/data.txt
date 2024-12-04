@@ -1,0 +1,36 @@
+apple
+banana123
+Orange
+Grape juice
+Name: John
+Name:    Sarah
+error123
+500error
+ERROR: System Failure
+Process completed successfully
+Success is achievable
+mission_completed
+mission__failed
+example.com
+sample@domain.com
+abc@xyz.net
+2023-10-28T12:34:56Z
+http://example.com
+https://secure-site.org
+Number of visitors: 0
+Total amount: 1500
+Item Price: $50.00
+Title: Data-Driven Analytics
+$pecial characters in use!
+EOF reached
+c++
+c?d
+regex+pattern
+special?characters
+Numbers like 123+456
+Optional_character?
+C?C+ results
+C++ programming
+john.doe@example.com
+jane_doe+xyz@gmail.com
+good_morning?

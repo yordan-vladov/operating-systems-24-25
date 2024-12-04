@@ -1,0 +1,6 @@
+ls /usr/bin | grep '^[bg]zip'
+cat data.txt | grep '^[ab]'
+cat data.txt | grep '[0-9]'
+cat data.txt | grep '[a-zA-Z0-9]'
+cat data.txt | grep '[^abc]'
+cat data.txt | grep '[^a-zA-Z0-9]'
