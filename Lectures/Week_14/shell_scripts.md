@@ -405,3 +405,264 @@ echo "Hello, $1! Welcome!"
 ```
 ---
 - Скрипт, който получава като аргумент две числа и принтира техният сбор.
+---
+## Цикли
+
+- В shell скриптовете може да създаваме `for` и `while` цикли.
+---
+### for цикъл
+
+```bash
+for variable in list
+do
+    # Commands to execute
+done
+```
+---
+```bash
+#!/bin/bash
+for name in Alice Bob Charlie
+do
+    echo "Hello, $name"
+done
+```
+---
+```bash
+for i in {1..5}
+do
+    echo "Number: $i"
+done
+```
+---
+```bash
+#! /bin/bash
+
+for (( i = 0; i < 5; i++));
+do
+    echo $i
+done
+```
+---
+```bash
+for arg in "$@"; do
+  echo "Arg: $arg"
+done
+```
+---
+- Скрипт който приема две цели числа n и m и принтира всички числа (n..m).
+---
+### while цикъл
+
+```bash
+while [ condition ]
+do
+    # Commands to execute
+done
+```
+---
+```bash
+#!/bin/bash
+count=1
+while [ $count -le 5 ]
+do
+    echo "Count: $count"
+    ((count++))
+done
+```
+---
+### until цикъл
+
+```bash
+until [ condition ]
+do
+    # Commands to execute
+done
+```
+---
+```bash
+#!/bin/bash
+count=1
+until [ $count -gt 5 ]
+do
+    echo "Count: $count"
+    ((count++))
+done
+```
+---
+- Напишете **bash** скрипт, който иска потребителят да въвежда числа, докато не въведе **stop**. Да се принтира най-голямото от въведените числа.
+---
+### break, continue
+
+- Можем да ползваме тези ключови думи в нашите цикли:
+    - `break` - излиза от цикъла
+    - `continue` - отива на следващата итерация на цикъла
+---
+```bash
+for i in {1..10}
+do
+    if [ $i -eq 5 ]
+    then
+        break
+    fi
+    echo "Number: $i"
+done
+```
+---
+```bash
+for i in {1..5}
+do
+    if [ $i -eq 3 ]
+    then
+        continue
+    fi
+    echo "Number: $i"
+done
+```
+---
+### Безкрайни цикли
+
+```bash
+while true
+do
+    echo "Running..."
+    sleep 1  # Pause for 1 second
+done
+```
+---
+```bash
+for (( ; ; ))
+do
+    echo "Infinite Loop"
+    sleep 1
+done
+```
+---
+### Четене от файлове ред по ред
+
+```bash
+while IFS= read -r line; do
+    echo "Text read from file: $line"
+done < my_filename.txt
+```
+---
+### Четене от резултат от команда
+
+```bash
+while IFS= read -r line; do
+    echo $line
+done < <(sort /etc/passwd)
+```
+
+---
+- Напишете **bash** скрипт, който чете файл и принтира съдържанието, като в началото на всеки ред трябва да добави номера на реда.
+---
+
+```txt
+This is the first line.      1: This is the first line.
+This is the second line. =>  2: This is the second line.
+This is the third line.      3: This is the third line.
+```
+---
+## Масиви
+
+- В **bash** скриптовете една променлива  може да пази множество стойности.
+- Полезни при пазене на списъци от стойности, файлови имена, аргументи, т.н.
+---
+### Видове масиви
+
+- **Индексирани масиви** - елементите се пазят чрез числени позиции (започващи от индекс 0).
+- **Асоциативни масиви** - елементите се пазят като двойки **ключ - стойност** (подобно на речници или hashmap-ове).
+---
+### Индексирани масиви
+
+```bash
+# Method 1: Declare and initialize in one line
+array1=("apple" "banana" "cherry")
+
+echo ${array1[0]}  # Output: apple
+echo ${array1[2]}  # Output: cherry
+```
+---
+```bash
+# Method 2: Declare an empty array and add elements later
+declare -a array2
+array2[0]="apple"
+array2[1]="banana"
+array2[2]="cherry"
+```
+---
+```bash
+# Method 3: Initialize with values directly
+array3=([0]="apple" [1]="banana" [2]="cherry")
+```
+---
+- Можем да достъпваме обща информация за масив:
+```bash
+# All elements of an array
+echo ${array1[@]}  # Output: apple banana cherry
+
+# Number of elements of an array
+echo ${#array1[@]}  # Output: 3
+```
+---
+- Можем да променяме съдържанието на масив:
+```bash
+# Appending an element to an array
+array1+=("date")
+echo ${array1[@]}  # Output: apple banana cherry date
+
+# Removing an element from an array
+unset array1[1]  # Removes "banana"
+echo ${array1[@]}  # Output: apple cherry date
+```
+---
+- Можем да итерираме през един масив:
+```bash
+for fruit in "${array1[@]}";
+do
+    echo $fruit
+done
+```
+---
+- Напишете **bash** скрипт, който иска потребителят да въведе списък от файлове. Скриптът принтира броят редове на всеки въведен файл.
+---
+```txt
+Enter filenames: file1.txt file2.txt file3.txt
+file1.txt: 10 lines
+file2.txt: 25 lines
+file3.txt: 15 lines
+```
+---
+### Асоциативни масиви
+
+```bash
+# Declare an associative array
+declare -A assoc_array
+
+# Initialize with key-value pairs
+assoc_array=([fruit]="apple" [color]="red" [size]="small")
+```
+---
+```bash
+# Accessing elements in assoc. array
+echo ${assoc_array[fruit]}  # Output: apple
+echo ${assoc_array[color]}  # Output: red
+```
+---
+- Можем да достъпваме всички ключове/стойности на един масив:
+```bash
+# All keys
+echo ${!assoc_array[@]}  # Output: fruit color size
+
+# All values
+echo ${assoc_array[@]}  # Output: apple red small
+```
+---
+- Можем да итерираме през един асоциативен масив:
+```bash
+for key in "${!assoc_array[@]}"; do
+    echo "$key: ${assoc_array[$key]}"
+done
+```
+---
+- Напишете **bash**, който иска потребителят да въведе изречение. Скриптът след това принтира всяка дума колко пъти се среща.
