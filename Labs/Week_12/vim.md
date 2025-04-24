@@ -53,3 +53,27 @@ vim test.txt
 1. Отвори файлът `/etc/passwd` (`vim /etc/passwd`).
 2. Натисни `/` и напиши дума, напр. `/bin`.
 3. Натисни `n` за следващо съвпадение, `N` за предишно.
+
+### **Задача 5**
+
+- Имате файл `todo.txt` със следното съдържание:
+```diff
+- Buy groceries
+- Finish report for work
+- Call mom
+- Clean the kitchen
+- Read a book
+- walk the dog
+- prepare dinner
+```
+
+- Извършете следните задачи:
+    1. Отворете файлът с Vim.
+    2. Направете така че всяка дума да започва с главна буква (напр. `Buy Groceries`, `Finish Report For Work`).
+    3. Преместете `Walk The Dog` да бъде на второ място в списъка.
+    4. Заместете `Clean The Kitchen` с `Clean The Garage`.
+    5. Маркирайте всички изпълнени задачи с `[x]` пред тях: `Buy Groceries`, `Call Mom`, и `Read A Book`.
+    6. Добавете нова високо-приоритетна задача най-отгоре: `- [!] Pay Bills`
+    7. Изтрийте задачата `Prepare Dinner`.
+    8. Запазете промените и излезте от Vim.
+    9. [Подсказки](./hints.md)
