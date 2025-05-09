@@ -85,6 +85,7 @@ sudo systemctl status docker
 ### Стъпка 1: Включване на виртуализация
 
 При Windows се използва виртуализация, за да подкарва своят Docker Engine. Затова трябва да влезете в BIOS менюто я включите, ако вече не е. [Инструкции как да влезем в BIOS на Thinkpad](https://support.lenovo.com/lt/lt/solutions/ht500006-how-to-enable-virtualization-technology-on-lenovo-computers).
+
 ### Стъпка 2: Инсталиране на WSL
 
 Docker при Windows може да използва различни технологии за виртуализация, но препоръчаната е WSL. За да я инсталирате, влезте в терминала и напишете:
@@ -95,6 +96,7 @@ wsl --install
 ### Стъпка 3: Инсталиране на Docker Desktop
 
 При Windows най-лесният начин да подкараме Docker е чрез Docker Desktop. Това е приложение, което ни предоставя лесен начин да наблюдаваме и управляваме нашите образи и контейнери, но също така и подкарва инициализира нашият Docker Engine. Docker Desktop също така включва `docker` CLI командата, която ни позволява да работим с Docker от терминала. [Страница за сваляне на Docker Desktop.](https://docs.docker.com/desktop/setup/install/windows-install/)
+
 ## Инсталиране на Docker на MacOS
 
 Ддз, ето [линк с инструкции](https://docs.docker.com/desktop/setup/install/mac-install/).
