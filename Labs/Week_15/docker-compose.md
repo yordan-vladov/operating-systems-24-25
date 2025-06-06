@@ -17,7 +17,7 @@ flask-compose-app/
 ├── app/
 │   ├── app.py
 │   └── requirements.txt
-├── docker-compose.yml
+├── compose.yml
 └── Dockerfile
 ```
 
@@ -67,7 +67,7 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 ```
 
-### Стъпка 4: `docker-compose.yml`
+### Стъпка 4: `compose.yml`
 
 ```yaml
 version: '3.8'
